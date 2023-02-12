@@ -40,9 +40,9 @@ do
     mm=$(( ${sleep_time} / 60 ))
     ss=$(( ${sleep_time} - ${mm} * 60 ))
     if [ $mm -eq 0 ];then
-        printf "\r%ds" ${ss}
+        printf "\r%d" ${ss}
     else
-        printf "\r%dm:%ds" ${mm} ${ss}
+        printf "\r%d:%d" ${mm} ${ss}
     fi
 
     if [ $sleep_time -eq 0 ];then
