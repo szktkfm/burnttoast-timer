@@ -32,3 +32,21 @@ fi
 sleep_time=$(convert_args ${1})
 
 toast_later $sleep_time "Pomo"&
+
+while :
+do
+    sleep 1;
+    sleep_time=$((${sleep_time} - 1))
+    mm=$(( ${sleep_time} / 60 ))
+    ss=$(( ${sleep_time} - ${mm} * 60 ))
+    if [ $mm -eq 0 ];then
+        printf "\r%ds" ${ss}
+    else
+        printf "\r%dm:%ds" ${mm} ${ss}
+    fi
+
+    if [ $sleep_time -eq 0 ];then
+        break
+    fi
+done
+
