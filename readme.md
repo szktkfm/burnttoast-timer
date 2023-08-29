@@ -1,4 +1,4 @@
-Prerequisites:
+### Prerequisites
 
 Ensure that https://github.com/Windos/BurntToast is installed.
 The platform should be based on WSL 
